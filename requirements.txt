@@ -1,6 +1,15 @@
+<<<<<<< HEAD
 asgiref==3.7.0
 Django==5.0.2
 django_debug_toolbar==3.8.1
 Pillow==9.4.0
 sqlparse==0.4.3
 tzdata==2022.7
+=======
+asgiref==3.7.0
+Django==5.0.2
+django_debug_toolbar==3.8.1
+Pillow==9.4.0
+sqlparse==0.4.3
+tzdata==2022.7
+>>>>>>> 84a9f2b33decbae313c407e036c1aeb50d64a940
