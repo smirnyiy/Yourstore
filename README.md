@@ -14,10 +14,9 @@
 <p>для создания всех миграций вы должны находиться в папке StoreOnline</p>
 
 <h3>Этап 3.Установите миграции командой</h3>
-python manage.py makemigrations
-python manage.py migrate
+<p>python manage.py makemigrations
+<p>python manage.py migrate
 
-<h3>Этап 4. Запуск проекта
-Запустите сервер командой
-python manage.py runserver
-После запуска сервера можно открыть браузер и перейти по адресу http://localhost:8000/ или http://127.0.0.1:8000/
+<h3>Этап 4. Запуск проекта</h3>
+<p>Запустите сервер командой python manage.py runserver</p>
+<p>После запуска сервера можно открыть браузер и перейти по адресу http://localhost:8000/ или http://127.0.0.1:8000/</p>
