@@ -1,6 +1,9 @@
 from django.contrib.auth.decorators import login_required
+from django.core.files.storage import FileSystemStorage
 from django.shortcuts import render, HttpResponseRedirect
 from django.views.generic import TemplateView, ListView, CreateView
+
+from .forms import ImageForm
 from .models import *
 from common.views import TitleMixin
 
@@ -47,3 +50,15 @@ def basket_remove(request, basket_id):
     basket = Basket.objects.get(id=basket_id)
     basket.delete()
     return HttpResponseRedirect(request.META['HTTP_REFERER'])
+
+
+def upload_image(request):
+    if request.method == 'POST':
+        form = ImageForm(request.POST, request.FILES)
+        if form.is_valid():
+            image = form.cleaned_data['image']
+            fs = FileSystemStorage()
+            fs.save(image.name, image)
+    else:
+        form = ImageForm()
+    return render(request, 'product/upload_image.html', {'form': form})
